@@ -4,8 +4,12 @@
   "description": "RTL reading mode with Arabic fonts and webview renderer for markdown files",
   "version": "0.1.0",
   "publisher": "ahmedbouchefra",
-  "engines": { "vscode": "^1.80.0" },
-  "categories": ["Other"],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
@@ -56,7 +60,11 @@
         },
         "arabicMode.readerBackground": {
           "type": "string",
-          "enum": ["dark", "sepia", "light"],
+          "enum": [
+            "dark",
+            "sepia",
+            "light"
+          ],
           "default": "sepia",
           "description": "Background style for the RTL reader panel"
         },
@@ -77,5 +85,9 @@
         }
       }
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techiediaries/arabic-mode-vscode.git"
   }
 }

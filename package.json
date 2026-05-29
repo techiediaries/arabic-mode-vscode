@@ -1,0 +1,81 @@
+{
+  "name": "arabic-mode",
+  "displayName": "Arabic Mode",
+  "description": "RTL reading mode with Arabic fonts and webview renderer for markdown files",
+  "version": "0.1.0",
+  "publisher": "ahmedbouchefra",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "arabicMode.toggle",
+        "title": "Arabic Mode: Toggle Editor Settings"
+      },
+      {
+        "command": "arabicMode.openReader",
+        "title": "Arabic Mode: Open RTL Reader"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "arabicMode.toggle",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      },
+      {
+        "command": "arabicMode.openReader",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      }
+    ],
+    "configuration": {
+      "title": "Arabic Mode",
+      "properties": {
+        "arabicMode.font": {
+          "type": "string",
+          "default": "Amiri, 'Noto Naskh Arabic', 'Traditional Arabic', Arial",
+          "description": "Font family used when Arabic Mode is active"
+        },
+        "arabicMode.fontSize": {
+          "type": "number",
+          "default": 16,
+          "description": "Font size when Arabic Mode is active"
+        },
+        "arabicMode.lineHeight": {
+          "type": "number",
+          "default": 2,
+          "description": "Line height when Arabic Mode is active"
+        },
+        "arabicMode.theme": {
+          "type": "string",
+          "default": "Default Dark Modern",
+          "description": "VS Code color theme to activate with Arabic Mode"
+        },
+        "arabicMode.readerBackground": {
+          "type": "string",
+          "enum": ["dark", "sepia", "light"],
+          "default": "sepia",
+          "description": "Background style for the RTL reader panel"
+        },
+        "arabicMode.readerFontSize": {
+          "type": "number",
+          "default": 20,
+          "description": "Font size in the RTL reader panel (px)"
+        },
+        "arabicMode.readerLineHeight": {
+          "type": "number",
+          "default": 2.2,
+          "description": "Line height in the RTL reader panel"
+        },
+        "arabicMode.readerMaxWidth": {
+          "type": "number",
+          "default": 820,
+          "description": "Max content width in the RTL reader panel (px)"
+        }
+      }
+    }
+  }
+}
